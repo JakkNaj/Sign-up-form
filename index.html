@@ -11,7 +11,7 @@
 <body>
     <div class="header-wrapper">
         <header>
-            <a>Bara-Ceramics</a>
+            <a>MOCK WEBSITE LOGO</a>
             <div>
                 <button class="heading-btn" type="button">HOME</button>
                 <button class="heading-btn" type="button">SHOP</button>
@@ -43,24 +43,35 @@
 
                     <div class="input-wrapper">
                         <label for="pass-input">Password</label>
-                        <input type="password" class="write-input" id="pass-input" placeholder="password">
+                        <input type="password" class="write-input" id="pass-input" placeholder="password"
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
                     </div>
 
                     <div class="newsletter-checkbox-wrapper">
-                        <input type="checkbox" id="newsletter-check">
-                        <div>
+                        <div class="checkbox-positioning">
+                            <input type="checkbox" id="newsletter-check">
+                        </div>
+                        <div class="checkbox-text">
                             Please check this box if you do not wish to receive marketing communications from us.
                         </div>
                     </div>
                     <div class="newsletter-checkbox-wrapper">
-                        <input type="checkbox" id="terms-check">
-                        <div>
+                        <div class="checkbox-positioning">
+                            <input type="checkbox" id="terms-check" required>
+                        </div>
+                        <div class="checkbox-text">
                             I have read, understood and agree to Privacy Policy
                             and terms and conditions of website usage.
                         </div>
                     </div>
-                    <button type="submit">Create account</button>
+                    <button type="submit" id="ca-submit-btn">Create account</button>
                 </form>
+                <div>
+                    Already have an account?
+                    <button id="a-log-in">
+                        Log in
+                    </button>
+                </div>
             </div>
             <div id="form-image-section">
             </div>

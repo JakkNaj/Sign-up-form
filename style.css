@@ -51,6 +51,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #create-account-form-wrapper {
@@ -91,10 +92,20 @@ form#create-account-form > div > label {
 
 
 .newsletter-checkbox-wrapper{
+    margin-top: 10px;
     display: grid;
     align-items: baseline;
     grid-template-columns: min-content 1fr;
-    gap:  10px;
+    gap: 10px;
+}
+
+.newsletter-checkbox-wrapper > div.checkbox-text {
+    font-size: 14px;
+}
+
+.newsletter-checkbox-wrapper > div.checkbox-positioning {
+    height: 100%;
+    padding-top: 1px;
 }
 
 input {
@@ -109,7 +120,7 @@ input {
 input[type="checkbox"]{
     background-color: rgb(255, 255, 255);
     margin: 0;
-    padding: 0;
+    padding:0;
     font: inherit;
     color: var(--brown);
     width: 16px;
@@ -119,7 +130,7 @@ input[type="checkbox"]{
     display: grid;
     place-content: center;
     cursor: pointer;
-}   
+}
 
 button[type="submit"] {
     background-color: var(--brown);
@@ -134,11 +145,15 @@ button[type="submit"] {
     border-radius: var(--border-radius);
     box-sizing: border-box;
     padding: 8px 15px;
-    margin: 0px;
-    text-decoration: none;
+    margin: 0 0 14px;
     border: none;
-    transition: border-color 333ms ease-in-out 0s, background 333ms ease-in-out 0s;
+    transition: all .2s ease-in-out;
 }
+
+#ca-submit-btn:hover {
+    transform: scale(1.04);
+}
+
 
 input.write-input:valid {
     border: 1px solid green;
@@ -152,4 +167,17 @@ input.write-input:placeholder-shown{
     border: 1px solid black;
 }
 
+#a-log-in{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: white;
+    font-size: 16px;
+    color: var(--brown);
+    transition: all .2s ease-in-out;
+}
+
+#a-log-in:hover {
+    transform: scale(1.1);
+}
 
