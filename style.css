@@ -1,3 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Silkscreen&display=swap');
+
+:root {
+    --header-font-size: 24px;
+    --border-radius: 4px;
+    --brown: rgb(192, 130, 97);
+    --maroon: rgb(154, 59, 59);
+    --beige: rgb(226, 199, 153);
+    --light-beiger: rgb(242, 236, 190);
+}
+
+* {
+    font-family: 'PT Mono', monospace;
+}
+
+body {
+    margin: 0;
+}
+
 .heading-btn {
     border: none;
+    background-color: white;
+    font-size: var(--header-font-size);
+    margin-left: 20px;
 }
+
+.header-wrapper {
+    margin: 0;
+    padding-top: 5px;
+}
+
+header {
+    max-width: 1170px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: var(--header-font-size);
+    margin: auto;
+    padding: 10px 40px;
+}
+
+main {
+    width: 970px;
+    background-color: white;
+    padding: 40px;
+    margin: 20px auto auto;
+    border-radius: var(--border-radius);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#create-account-form-wrapper {
+    width: 50%;
+}
+
+#create-account-form-wrapper > h2{
+    margin-top: 0;
+}
+
+form#create-account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#form-image-section {
+    width: 40%;
+    background-image: url("resources/hand-pottery.jpg");
+    background-size: cover;
+    border-radius: var(--border-radius);
+}
+
+form#create-account-form > div > label {
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    font-size: 0.875rem;
+    letter-spacing: 0.06429em;
+    line-height: 1.28571;
+    text-transform: uppercase;
+    margin: 10px 0 0;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.newsletter-checkbox-wrapper{
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: min-content 1fr;
+    gap:  10px;
+}
+
+input {
+    border-radius: var(--border-radius);
+    height: 34px;
+    padding: 5px 30px 5px 8px;
+    margin: 2px 0px 1px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type="checkbox"]{
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: var(--brown);
+    width: 16px;
+    height: 16px;
+    border: 1px solid currentcolor;
+    border-radius: 1px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}   
+
+button[type="submit"] {
+    background-color: var(--brown);
+    height: 42px;
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.625;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    padding: 8px 15px;
+    margin: 0px;
+    text-decoration: none;
+    border: none;
+    transition: border-color 333ms ease-in-out 0s, background 333ms ease-in-out 0s;
+}
+
+input.write-input:valid {
+    border: 1px solid green;
+}
+
+input.write-input:invalid {
+    border: 1px solid red;
+}
+
+input.write-input:placeholder-shown{
+    border: 1px solid black;
+}
+
+

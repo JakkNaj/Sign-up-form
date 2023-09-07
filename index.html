@@ -9,12 +9,63 @@
     <title>Bara-Ceramics</title>
 </head>
 <body>
-    <header>
-        <a>Bara-Ceramics</a>
-        <button class="heading-btn" type="button">Home</button>
-        <button class="heading-btn" type="button">Shop</button>
-        <button class="heading-btn" type="button">Log In</button>
-        <button class="heading-btn" type="button">Sign Up</button>
-    </header>
+    <div class="header-wrapper">
+        <header>
+            <a>Bara-Ceramics</a>
+            <div>
+                <button class="heading-btn" type="button">HOME</button>
+                <button class="heading-btn" type="button">SHOP</button>
+                <button class="heading-btn" type="button">LOG IN</button>
+                <button class="heading-btn" type="button">CREATE ACCOUNT</button>
+            </div>
+        </header>
+    </div>
+    <div class="main-wrapper">
+        <main>
+            <div id="create-account-form-wrapper">
+                <h2>Create an account</h2>
+                <form id="create-account-form">
+                    <div class="input-wrapper">
+                        <label for="name-input"> First Name</label>
+                        <input type="text" class="write-input" id="name-input" placeholder="John" required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="surname-input">Last Name</label>
+                        <input type="text" class="write-input" id="surname-input" placeholder="Doe" required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="email-input">Email</label>
+                        <input type="email" class="write-input" id="email-input" placeholder="john@doe.com"
+                               required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="pass-input">Password</label>
+                        <input type="password" class="write-input" id="pass-input" placeholder="password">
+                    </div>
+
+                    <div class="newsletter-checkbox-wrapper">
+                        <input type="checkbox" id="newsletter-check">
+                        <div>
+                            Please check this box if you do not wish to receive marketing communications from us.
+                        </div>
+                    </div>
+                    <div class="newsletter-checkbox-wrapper">
+                        <input type="checkbox" id="terms-check">
+                        <div>
+                            I have read, understood and agree to Privacy Policy
+                            and terms and conditions of website usage.
+                        </div>
+                    </div>
+                    <button type="submit">Create account</button>
+                </form>
+            </div>
+            <div id="form-image-section">
+            </div>
+
+        </main>
+    </div>
 </body>
 </html>
